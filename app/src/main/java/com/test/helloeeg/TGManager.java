@@ -11,7 +11,35 @@ import com.neurosky.thinkgear.TGEegPower;
 import java.io.FileOutputStream;
 import java.util.LinkedList;
 import java.util.Queue;
+/*
+ * IMPORTANT CODE: used in calling class
+ */
 
+/*
+ * Creates manager object
+        TGManager manager = TGManager.getInstance();
+ */
+
+/*
+ * Sets up bluetooth device
+ * Exits if bluetooth is not available
+        if (!manager.bluetoothSetup()) {
+            Toast.makeText(this, "Bluetooth not available", Toast.LENGTH_LONG).show();
+            finish();
+        }
+ */
+
+/*
+ * Initiates connection to Mindwave
+ * MUST BE DONE AFTER bluetoothSetup()
+        manager.connect();
+ */
+
+/*
+ * Kills connection and flushes data
+ * Could be used as sole writer call (probably shouldn't be)
+        manager.destroy(this);
+ */
 
 /**
  * Created by LamKat on 03/02/2016.
